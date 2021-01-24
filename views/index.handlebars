@@ -46,12 +46,12 @@
 					<h6 class="card-header">MONDAY</h6>
 					{{#if schedules}}
 					<ul class="list-group list-group-flush">
-						{{#each schedules}} {{#if monday}}
+						{{#each schedules}} {{#if this.datatype.monday}}
 						<li class="list-group-item bg-transparent">
-							<a class="card-text child text-white" data-cid="{{Child.id}}"
-								data-firstname="{{name_first}}" data-lastname="{{name_last}}"
-								href="/childprofile/{{id}}">
-								{{name_first}} {{name_last}}
+							<a class="card-text child text-white" data-cid="{{this.datatype.id}}"
+								data-firstname="{{his.dataValues.name_first}}"
+								data-lastname="{{his.dataValues.name_last}}" href="/childprofile/{{his.dataValues.id}}">
+								{{his.dataValues.name_first}} {{his.dataValues.name_last}}
 							</a>
 						</li>
 						{{/if}} {{/each}}
@@ -66,11 +66,14 @@
 					<ul class="list-group list-group-flush">
 						{{#each schedules}} {{#if tuesday}}
 						<li class="list-group-item bg-transparent">
-							<a class="card-text child text-white" data-cid="{{id}}" data-firstname="{{name_first}}"
-								data-lastname="{{name_last}}" href="/childprofile/{{id}}">
+							<a class="card-text child text-white" data-cid="{{this.id}}"
+								data-firstname="{{this.name_first}}" data-lastname="{{this.name_last}}"
+								href="/childprofile/{{id}}">
 								{{name_first}} {{name_last}}
+
 							</a>
 						</li>
+
 						{{/if}} {{/each}}
 					</ul>
 					{{/if}}

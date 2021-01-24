@@ -1,5 +1,5 @@
-const express = require("express");
-const router = express().Router();
+// const express = require("express");
+// const router = express().Router();
 
 module.exports = function(app) {
   app.get("/newParent", function(req, res) {

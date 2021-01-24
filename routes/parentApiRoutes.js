@@ -1,6 +1,6 @@
 var db = require("../models");
-const express = require("express");
-const router = express().Router();
+// const express = require("express");
+// const router = express().Router();
 
 module.exports = function(app) {
   //get all parents
