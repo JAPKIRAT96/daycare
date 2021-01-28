@@ -97,3 +97,57 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+var alertthing = $("<div>")
+  .addClass("alert alert-danger")
+  .attr("role", "alert")
+  .text("child not found");
+alertthing.alert("close");
+// { {#if schedules } }
+$("#childSearch").on("submit", function(e) {
+  e.preventDefault();
+  alertthing.alert("close");
+  $(".child").each(function(index) {
+    $(this).removeClass("mark");
+  });
+  var query = $("#searchquery")
+    .val()
+    .trim();
+  console.log(query);
+  var notFound = true;
+  $(".child").each(function(index) {
+    console.log($(this).attr("data-firstname"));
+    if (
+      query.toLowerCase().includes(
+        $(this)
+          .attr("data-firstname")
+          .toLowerCase()
+      )
+    ) {
+      $(this).addClass("mark");
+      notFound = false;
+    }
+    if (
+      query.toLowerCase().includes(
+        $(this)
+          .attr("data-lastname")
+          .toLowerCase()
+      )
+    ) {
+      $(this).addClass("mark");
+      notFound = false;
+    }
+  });
+  if (notFound) {
+    $("#alertZone").append(alertthing);
+    alertthing.alert();
+  }
+});
+$("#clearsearch").on("click", function(e) {
+  e.preventDefault();
+  alertthing.alert("close");
+  $(".child").each(function(index) {
+    $(this).removeClass("mark");
+  });
+});
+// { { /if}}

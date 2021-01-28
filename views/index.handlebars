@@ -23,20 +23,17 @@
 <body>
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-5 logo">NanaCare</h1>
-			<p class="lead">Welcome to NanaCare! An admin tool for daycares.</p>
+			<h1 class="display-5 logo">STARWIDE CARE</h1>
+			<p class="lead">Welcome to Starwide care! An admin tool for daycares.</p>
 			​
 			<div id="alertZone"></div>
 			<nav class="navbar navbar-light bg-light">
 				<h5 class="navbar-brand mr-4">WEEKLY VIEW</h5>
-				<form class="form-inline my-2 my-lg-0 ml-4" id="childSearch">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-						id="searchquery" />
-					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
-						Search
-					</button>
-				</form>
-				<button class="btn btn-danger" id="clearsearch">Clear Search</button>
+				<div class="col-md-4">
+					<a class="badge badge-primary" href="/newparent" style="padding: 10px; margin:15px">Begin
+						Registration
+						Link</a>
+
 			</nav>
 		</div>
 
@@ -44,104 +41,109 @@
 			<div class="card-group">
 				<div class="card text-white bg-primary day-card">
 					<h6 class="card-header">MONDAY</h6>
-					{{#if schedules}}
-					<ul class="list-group list-group-flush">
-						{{#each schedules}} {{#if this.datatype.monday}}
-						<li class="list-group-item bg-transparent">
-							<a class="card-text child text-white" data-cid="{{this.datatype.id}}"
-								data-firstname="{{his.dataValues.name_first}}"
-								data-lastname="{{his.dataValues.name_last}}" href="/childprofile/{{his.dataValues.id}}">
-								{{his.dataValues.name_first}} {{his.dataValues.name_last}}
-							</a>
-						</li>
-						{{/if}} {{/each}}
-					</ul>
-					{{/if}}
+					{{#each schedules}}
+
+					<ol class="list-group list-group-flush">
+						{{#if monday}}
+						<a class="card-text child text-white" data-cid="{{Child.id}}"
+							data-firstname="{{Child.name_first}}" data-lastname="{{Child.name_last}}"
+							href="/childprofile/{{Child.id}}">
+							{{Child.name_first}} {{Child.name_last}}
+						</a>
+						{{/if}}
+					</ol>
+					{{/each}}
+
 				</div>
 
 				<div class="card text-white bg-success day-card">
 					<h6 class="card-header">TUESDAY</h6>
-					{{schedules}}
-					{{#if schedules}}
-					<ul class="list-group list-group-flush">
-						{{#each schedules}} {{#if tuesday}}
-						<li class="list-group-item bg-transparent">
-							<a class="card-text child text-white" data-cid="{{this.id}}"
-								data-firstname="{{this.name_first}}" data-lastname="{{this.name_last}}"
-								href="/childprofile/{{id}}">
-								{{name_first}} {{name_last}}
+					{{#each schedules}}
 
+					<ol class="list-group list-group-flush">
+						{{#if tuesday}}
+						<li>
+							<a class="card-text child text-white" data-cid="{{Child.id}}"
+								data-firstname="{{Child.name_first}}" data-lastname="{{Child.name_last}}"
+								href="/childprofile/{{Child.id}}">
+								{{Child.name_first}} {{Child.name_last}}
 							</a>
 						</li>
+						{{/if}}
 
-						{{/if}} {{/each}}
-					</ul>
-					{{/if}}
+
+					</ol>
+					{{/each}}
+
+
 				</div>
 
 				<div class="card text-white bg-danger day-card">
 					<h6 class="card-header">WEDNESDAY</h6>
-					{{#if schedules}}
-					<ul class="list-group list-group-flush">
-						{{#each schedules}} {{#if wednesday}}
-						<li class="list-group-item bg-transparent">
-							<a class="card-text child text-white" data-cid="{{id}}" data-firstname="{{name_first}}"
-								data-lastname="{{name_last}}" href="/childprofile/{{id}}">
-								{{name_first}} {{name_last}}
+					{{#each schedules}}
+
+					<ol class="list-group list-group-flush">
+						{{#if wednesday}}
+						<li>
+							<a class="card-text child text-white" data-cid="{{Child.id}}"
+								data-firstname="{{Child.name_first}}" data-lastname="{{Child.name_last}}"
+								href="/childprofile/{{Child.id}}">
+								{{Child.name_first}} {{Child.name_last}}
 							</a>
 						</li>
-						{{/if}} {{/each}}
-					</ul>
-					{{/if}}
+						{{/if}}
+
+
+					</ol>
+					{{/each}}
 				</div>
 				<div class="card text-white bg-warning day-card">
 					<h6 class="card-header">THURSDAY</h6>
-					{{#if schedules}}
-					<ul class="list-group list-group-flush">
-						{{#each schedules}} {{#if thursday}}
-						<li class="list-group-item bg-transparent">
-							<a class="card-text child text-white" data-cid="{{id}}" data-firstname="{{name_first}}"
-								data-lastname="{{name_last}}" href="/childprofile/{{id}}">
-								{{name_first}} {{name_last}}
+					{{#each schedules}}
+
+					<ol class="list-group list-group-flush">
+						{{#if thursday}}
+						<li>
+							<a class="card-text child text-white" data-cid="{{Child.id}}"
+								data-firstname="{{Child.name_first}}" data-lastname="{{Child.name_last}}"
+								href="/childprofile/{{Child.id}}">
+								{{Child.name_first}} {{Child.name_last}}
 							</a>
 						</li>
-						{{/if}} {{/each}}
-					</ul>
-					{{/if}}
+						{{/if}}
+
+
+					</ol>
+					{{/each}}
 				</div>
 
-				<div class="card text-white bg-info day-card">
+				<div class="card text-white bg-primary day-card">
 					<h6 class="card-header">FRIDAY</h6>
-					{{#if schedules}}
-					<ul class="list-group list-group-flush">
-						{{#each schedules}} {{#if friday}}
-						<li class="list-group-item bg-transparent">
+					{{#each schedules}}
 
-							<a class="card-text child text-white" data-cid="{{id}}" data-firstname="{{name_first}}"
-								data-lastname="{{name_last}}" href="/childprofile/{{id}}">
-								{{name_first}} {{name_last}}
+					<ol class="list-group list-group-flush">
+						{{#if friday}}
+						<li>
+							<a class="card-text child text-white" data-cid="{{Child.id}}"
+								data-firstname="{{Child.name_first}}" data-lastname="{{Child.name_last}}"
+								href="/childprofile/{{Child.id}}">
+								{{Child.name_first}} {{Child.name_last}}
 							</a>
 						</li>
-						{{/if}} {{/each}}
-					</ul>
-					{{/if}}
+						{{/if}}
+
+
+					</ol>
+					{{/each}}
 				</div>
 			</div>
 		</div>
 	</div>
 
+
 	<footer class="footer page-footer font-small bg-dark">
-		<div class="container-fluid text-center text-md-left">
-			<div class="row justify-content-between">
-				<div class="col-md-4">
-					<a class="badge badge-secondary" href="/api/child">Children API</a>
-					<a class="badge badge-secondary" href="api/parent">Parent API</a>
-				</div>
-				<div class="col-md-4">
-					<a class="badge badge-primary" href="/newparent">Begin Registration Link</a>
-				</div>
-			</div>
-		</div>
+
+
 	</footer>
 
 	<!-- Optional JavaScript -->
@@ -159,7 +161,7 @@
 
 		var alertthing = $("<div>").addClass("alert alert-danger").attr("role", "alert").text("child not found");
 		alertthing.alert("close");
-		{ {#if schedules } }
+
 		$("#childSearch").on("submit", function (e) {
 			e.preventDefault();
 			alertthing.alert("close");
@@ -193,6 +195,6 @@
 				$(this).removeClass("mark")
 			});
 		});
-		{ { /if}}
+
 	</script>
 </body>
