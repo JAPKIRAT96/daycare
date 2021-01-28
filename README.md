@@ -48,7 +48,7 @@ $ node server
 
 ### App Views
 
-<img src="reference/weekviewshot.png" width="500">
+<img src="/reference/weekviewshot.png" width="500">
 <img src="reference/childprofileshot.png" width="500">
 
 ### Form Views
