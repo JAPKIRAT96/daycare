@@ -1,7 +1,5 @@
 # STARWIDE CARE
 
-## [Heroku Deployment]()
-
 ## Table of Contents
 
 1. [About](#about)
