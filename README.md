@@ -2,7 +2,7 @@
 
 ## [Heroku Deployment]()
 
-# Table of Contents
+## Table of Contents
 
 1. [About](#about)
 2. [How To](#howto)
