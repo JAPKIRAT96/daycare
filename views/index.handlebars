@@ -43,7 +43,7 @@
 					<h6 class="card-header">MONDAY</h6>
 					{{#each schedules}}
 
-					<ol class="list-group list-group-flush">
+					<ul class="list-group list-group-flush">
 						{{#if monday}}
 						<a class="card-text child text-white" data-cid="{{Child.id}}"
 							data-firstname="{{Child.name_first}}" data-lastname="{{Child.name_last}}"
@@ -51,7 +51,7 @@
 							{{Child.name_first}} {{Child.name_last}}
 						</a>
 						{{/if}}
-					</ol>
+					</ul>
 					{{/each}}
 
 				</div>
@@ -60,7 +60,7 @@
 					<h6 class="card-header">TUESDAY</h6>
 					{{#each schedules}}
 
-					<ol class="list-group list-group-flush">
+					<ul class="list-group list-group-flush">
 						{{#if tuesday}}
 						<li>
 							<a class="card-text child text-white" data-cid="{{Child.id}}"
@@ -72,7 +72,7 @@
 						{{/if}}
 
 
-					</ol>
+					</ul>
 					{{/each}}
 
 
@@ -82,7 +82,7 @@
 					<h6 class="card-header">WEDNESDAY</h6>
 					{{#each schedules}}
 
-					<ol class="list-group list-group-flush">
+					<ul class="list-group list-group-flush">
 						{{#if wednesday}}
 						<li>
 							<a class="card-text child text-white" data-cid="{{Child.id}}"
@@ -94,14 +94,14 @@
 						{{/if}}
 
 
-					</ol>
+					</ul>
 					{{/each}}
 				</div>
 				<div class="card text-white bg-warning day-card">
 					<h6 class="card-header">THURSDAY</h6>
 					{{#each schedules}}
 
-					<ol class="list-group list-group-flush">
+					<ul class="list-group list-group-flush">
 						{{#if thursday}}
 						<li>
 							<a class="card-text child text-white" data-cid="{{Child.id}}"
@@ -113,15 +113,15 @@
 						{{/if}}
 
 
-					</ol>
+					</ul>
 					{{/each}}
 				</div>
 
-				<div class="card text-white bg-primary day-card">
+				<div class="card text-white bg-info day-card">
 					<h6 class="card-header">FRIDAY</h6>
 					{{#each schedules}}
 
-					<ol class="list-group list-group-flush">
+					<ul class="list-group list-group-flush">
 						{{#if friday}}
 						<li>
 							<a class="card-text child text-white" data-cid="{{Child.id}}"
@@ -133,7 +133,7 @@
 						{{/if}}
 
 
-					</ol>
+					</ul>
 					{{/each}}
 				</div>
 			</div>
