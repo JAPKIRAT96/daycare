@@ -14,7 +14,7 @@
 
 STARWIDE CARE is an application for daycare administrators to easily organize and register children.
 
-Features:-
+#### Features:-
 
 - Easy week view to display the children who will be attending organized by the day of the week.
 - Includes form system for parents to register their children and select the days they will be attending.
@@ -22,7 +22,7 @@ Features:-
 - Clickable links to display more info on a child including age, gender, allergies, and other notes. (indevlopment)
 - Edit and change Child data and thier schedules with clickable links. (indevlopment)
 
-## HowTo
+## Guide
 
 - To register a parent, their child, assign the child days to attend, and register more children, use the form in the bottom right corner labeled "Begin Registration".
 - Data will be displayed on the home page.
