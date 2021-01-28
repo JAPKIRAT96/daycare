@@ -1,4 +1,4 @@
-# bootcamp-project-2
+# STARWIDE CARE
 
 ## [Heroku Deployment]()
 
@@ -43,6 +43,10 @@ Run the following in the main directory to start app onl localhost port 3000
 ```
 $ node server
 ```
+
+## Contributors
+
+Japkirat Singh
 
 ## Screenshots
 
